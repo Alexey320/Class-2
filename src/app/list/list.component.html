@@ -1,0 +1,14 @@
+<p>
+  list works!
+</p>
+
+
+<a routerLink="/">На Главную</a>
+<ul>
+  <li *ngFor="let product of products">
+    <h3>{{product.title}}</h3>
+    <p>{{product.anon}}</p>
+    <span>{{product.price}} рублей</span>
+    <a [routerLink]="'/view/' + product.id">Далее</a>
+  </li>
+</ul>
